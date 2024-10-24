@@ -1,0 +1,31 @@
+/* Home Section */
+Home {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Dark background color */
+    position: relative;
+}
+
+/* Infinite Background Pattern */
+body::before {
+    content: '';
+    position: fixed; /* Make it fixed so it always stays in place as content grows */
+    background-color: #232422; /* Dark background color */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(0deg, rgba(53, 39, 68, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(48, 29, 73, 0.5) 1px, transparent 1px);
+    background-size: 70px 60px; /* Size of each square */
+    z-index: -1; /* Ensure the pattern is behind other content */
+}
+
+/* Body Styling for Infinite Scroll */
+body {
+    min-height: 100vh; /* Ensure the background covers the entire height */
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Full height for centering */
+    display: flex;
+    align-items: flex-start; /* Align items at the start (top) */
+    justify-content: center; /* Center horizontally */
+    background: linear-gradient(to right, #4c2a91, #9b59b6); /* Background gradient for the body */
+}
+
+.Navbar {
+    margin-top: 20px; /* Adjust this value for vertical spacing from the top */
+    display: flex; /* Make the navbar a flex container */
+    justify-content: center; /* Center content horizontally */
+}
+
+.button-container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background for glass effect */
+    backdrop-filter: blur(10px); /* Blur effect for the glass-like appearance */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border for contrast */
+    width: 700px; /* Fixed width for the navbar */
+    height: 50px; /* Fixed height for the navbar */
+    align-items: center;
+    justify-content: space-around; /* Space buttons evenly */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: rgba(1, 1, 1, 0.1) 0px 5px 15px; /* Soft shadow for depth */
+    transition: all 0.5s; /* Smooth transitions */
+}
+
+/* Hover effect */
+.button-container:hover {
+    background-color: #2e073f;
+    transition: all 0.5s;
+}
+
+.button {
+    outline: 0 !important; /* Remove outline */
+    border: 0 !important; /* Remove border */
+    width: 40px; /* Width for the button */
+    height: 40px; /* Height for the button */
+    border-radius: 50%; /* Rounded buttons */
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background for buttons */
+    display: flex; /* Flexbox for centering icon */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: #fff; /* White color for icons */
+    transition: all ease-in-out 0.3s; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.button:hover {
+    transform: translateY(10px); /* Lift effect on hover */
+}
+
+.icon {
+    font-size: 20px; /* Size for icons */
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 768px) {
+    .button-container {
+        width: 100%; /* Full width for mobile */
+        height: 60px; /* Adjust height for better touch interaction */
+        border-radius: 10px; /* Less rounded on mobile */
+        justify-content: space-between; /* Better spacing on smaller screens */
+        padding: 0 20px; /* Add padding for mobile */
+    }
+
+    .button {
+        width: 35px; /* Slightly smaller buttons on mobile */
+        height: 35px;
+    }
+
+    .icon {
+        font-size: 18px; /* Adjust icon size for mobile */
+    }
+}
+
+/* For very small mobile screens (e.g., below 480px) */
+@media (max-width: 480px) {
+    .button-container {
+        height: 50px; /* Adjust height */
+        padding: 0 10px; /* Less padding on very small screens */
+    }
+
+    .button {
+        width: 30px; /* Smaller buttons */
+        height: 30px;
+    }
+
+    .icon {
+        font-size: 16px; /* Smaller icon size */
+    }
+}
